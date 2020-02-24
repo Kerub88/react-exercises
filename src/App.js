@@ -9,7 +9,7 @@ class App extends Component {
 
     this.state = {
       monsters: [],
-      search: ''
+      searchField: ''
     };
   }
 
@@ -20,6 +20,7 @@ class App extends Component {
   }
 
   render() {
+    conts { monsters, searchField } = this.state;
     return (
       <div className="App">
         <input 
