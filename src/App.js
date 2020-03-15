@@ -25,6 +25,7 @@ class App extends Component {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(users => this.setState({ monsters: users}))
+      .catch(error => console.log(error))
   }
 
   render() {
@@ -33,6 +34,7 @@ class App extends Component {
       monster.name.toLowerCase().includes(searchField.toLowerCase()) )
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <SearchBox 
           placeholder='search monsters'
           handleChange={this.handelChange}
